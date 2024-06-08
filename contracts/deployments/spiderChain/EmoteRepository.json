@@ -1,0 +1,552 @@
+{
+  "address": "0x18BB6828A09E1bB6B6De229Df35b3951fFAD7d5E",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "BulkParametersOfUnequalLength",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ExpiredPresignedEmote",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidSignature",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "emoter",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "collection",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "emoji",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "on",
+          "type": "bool"
+        }
+      ],
+      "name": "Emoted",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DOMAIN_SEPARATOR",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "collections",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "emojis",
+          "type": "string[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "states",
+          "type": "bool[]"
+        }
+      ],
+      "name": "bulkEmote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "collections",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "emojis",
+          "type": "string[]"
+        }
+      ],
+      "name": "bulkEmoteCountOf",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "collections",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "emojis",
+          "type": "string[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "states",
+          "type": "bool[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "deadlines",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "bulkPrepareMessagesToPresignEmote",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "emoters",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "collections",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "emojis",
+          "type": "string[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "states",
+          "type": "bool[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "deadlines",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint8[]",
+          "name": "v",
+          "type": "uint8[]"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "r",
+          "type": "bytes32[]"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "s",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "bulkPresignedEmote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "collection",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "emoji",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "state",
+          "type": "bool"
+        }
+      ],
+      "name": "emote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "collection",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "emoji",
+          "type": "string"
+        }
+      ],
+      "name": "emoteCountOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "emoter",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "collection",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "emoji",
+          "type": "string"
+        }
+      ],
+      "name": "hasEmoterUsedEmote",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "emoters",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "collections",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "emojis",
+          "type": "string[]"
+        }
+      ],
+      "name": "haveEmotersUsedEmotes",
+      "outputs": [
+        {
+          "internalType": "bool[]",
+          "name": "",
+          "type": "bool[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "collection",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "emoji",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "state",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        }
+      ],
+      "name": "prepareMessageToPresignEmote",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "emoter",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "collection",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "emoji",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "state",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "presignedEmote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x9287f26033e0852a8400bd14814235e698a97fa6cdee611fd54389c5425e1553",
+  "receipt": {
+    "to": null,
+    "from": "0x79827dAE626421e3E4e548FF524b23d2A3ad776E",
+    "contractAddress": "0x18BB6828A09E1bB6B6De229Df35b3951fFAD7d5E",
+    "transactionIndex": 0,
+    "gasUsed": "2028886",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x7c7fbcb8868270d757c7ea5a918d873e2592b8d1bd6771f4cb57c484df5eee1a",
+    "transactionHash": "0x9287f26033e0852a8400bd14814235e698a97fa6cdee611fd54389c5425e1553",
+    "logs": [],
+    "blockNumber": 192482,
+    "cumulativeGasUsed": "2028886",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "73623be5649659c8fe18dc3bf5f392c8",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"BulkParametersOfUnequalLength\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ExpiredPresignedEmote\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidSignature\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"emoter\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"collection\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"emoji\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"on\",\"type\":\"bool\"}],\"name\":\"Emoted\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DOMAIN_SEPARATOR\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"collections\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"internalType\":\"string[]\",\"name\":\"emojis\",\"type\":\"string[]\"},{\"internalType\":\"bool[]\",\"name\":\"states\",\"type\":\"bool[]\"}],\"name\":\"bulkEmote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"collections\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"internalType\":\"string[]\",\"name\":\"emojis\",\"type\":\"string[]\"}],\"name\":\"bulkEmoteCountOf\",\"outputs\":[{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"collections\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"internalType\":\"string[]\",\"name\":\"emojis\",\"type\":\"string[]\"},{\"internalType\":\"bool[]\",\"name\":\"states\",\"type\":\"bool[]\"},{\"internalType\":\"uint256[]\",\"name\":\"deadlines\",\"type\":\"uint256[]\"}],\"name\":\"bulkPrepareMessagesToPresignEmote\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"emoters\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"collections\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"internalType\":\"string[]\",\"name\":\"emojis\",\"type\":\"string[]\"},{\"internalType\":\"bool[]\",\"name\":\"states\",\"type\":\"bool[]\"},{\"internalType\":\"uint256[]\",\"name\":\"deadlines\",\"type\":\"uint256[]\"},{\"internalType\":\"uint8[]\",\"name\":\"v\",\"type\":\"uint8[]\"},{\"internalType\":\"bytes32[]\",\"name\":\"r\",\"type\":\"bytes32[]\"},{\"internalType\":\"bytes32[]\",\"name\":\"s\",\"type\":\"bytes32[]\"}],\"name\":\"bulkPresignedEmote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"collection\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"emoji\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"state\",\"type\":\"bool\"}],\"name\":\"emote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"collection\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"emoji\",\"type\":\"string\"}],\"name\":\"emoteCountOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"emoter\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"collection\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"emoji\",\"type\":\"string\"}],\"name\":\"hasEmoterUsedEmote\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"emoters\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"collections\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"tokenIds\",\"type\":\"uint256[]\"},{\"internalType\":\"string[]\",\"name\":\"emojis\",\"type\":\"string[]\"}],\"name\":\"haveEmotersUsedEmotes\",\"outputs\":[{\"internalType\":\"bool[]\",\"name\":\"\",\"type\":\"bool[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"collection\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"emoji\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"state\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"prepareMessageToPresignEmote\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"emoter\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"collection\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"emoji\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"state\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"presignedEmote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/EmotableRepository.sol\":\"EmoteRepository\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":400},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\"},\"contracts/EmotableRepository.sol\":{\"content\":\"// SPDX-License-Identifier: CC0-1.0\\n\\npragma solidity ^0.8.21;\\n\\nimport \\\"./IERC7409.sol\\\";\\nimport \\\"@openzeppelin/contracts/utils/introspection/IERC165.sol\\\";\\n\\nerror BulkParametersOfUnequalLength();\\nerror ExpiredPresignedEmote();\\nerror InvalidSignature();\\n\\ncontract EmoteRepository is IERC7409 {\\n    bytes32 public immutable DOMAIN_SEPARATOR =\\n        keccak256(\\n            abi.encode(\\n                \\\"ERC-7409: Public Non-Fungible Token Emote Repository\\\",\\n                \\\"1\\\",\\n                block.chainid,\\n                address(this)\\n            )\\n        );\\n\\n    // Used to avoid double emoting and control undoing\\n    mapping(address emoter => mapping(address collection => mapping(uint256 tokenId => mapping(string emoji => uint256 state))))\\n        private _emotesUsedByEmoter; // Cheaper than using a bool\\n    mapping(address collection => mapping(uint256 tokenId => mapping(string emoji => uint256 count)))\\n        private _emotesPerToken;\\n\\n    function emoteCountOf(\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji\\n    ) public view returns (uint256) {\\n        return _emotesPerToken[collection][tokenId][emoji];\\n    }\\n\\n    function bulkEmoteCountOf(\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis\\n    ) public view returns (uint256[] memory) {\\n        if (\\n            collections.length != tokenIds.length ||\\n            collections.length != emojis.length\\n        ) {\\n            revert BulkParametersOfUnequalLength();\\n        }\\n\\n        uint256[] memory counts = new uint256[](collections.length);\\n        for (uint256 i; i < collections.length; ) {\\n            counts[i] = _emotesPerToken[collections[i]][tokenIds[i]][emojis[i]];\\n            unchecked {\\n                ++i;\\n            }\\n        }\\n        return counts;\\n    }\\n\\n    function hasEmoterUsedEmote(\\n        address emoter,\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji\\n    ) public view returns (bool) {\\n        return _emotesUsedByEmoter[emoter][collection][tokenId][emoji] == 1;\\n    }\\n\\n    function haveEmotersUsedEmotes(\\n        address[] memory emoters,\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis\\n    ) public view returns (bool[] memory) {\\n        if (\\n            emoters.length != collections.length ||\\n            emoters.length != tokenIds.length ||\\n            emoters.length != emojis.length\\n        ) {\\n            revert BulkParametersOfUnequalLength();\\n        }\\n\\n        bool[] memory states = new bool[](collections.length);\\n        for (uint256 i; i < collections.length; ) {\\n            states[i] =\\n                _emotesUsedByEmoter[emoters[i]][collections[i]][tokenIds[i]][\\n                    emojis[i]\\n                ] ==\\n                1;\\n            unchecked {\\n                ++i;\\n            }\\n        }\\n        return states;\\n    }\\n\\n    function emote(\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji,\\n        bool state\\n    ) public {\\n        bool currentVal = _emotesUsedByEmoter[msg.sender][collection][tokenId][\\n            emoji\\n        ] == 1;\\n        if (currentVal != state) {\\n            if (state) {\\n                _emotesPerToken[collection][tokenId][emoji] += 1;\\n            } else {\\n                _emotesPerToken[collection][tokenId][emoji] -= 1;\\n            }\\n            _emotesUsedByEmoter[msg.sender][collection][tokenId][emoji] = state\\n                ? 1\\n                : 0;\\n            emit Emoted(msg.sender, collection, tokenId, emoji, state);\\n        }\\n    }\\n\\n    function bulkEmote(\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis,\\n        bool[] memory states\\n    ) public {\\n        if (\\n            collections.length != tokenIds.length ||\\n            collections.length != emojis.length ||\\n            collections.length != states.length\\n        ) {\\n            revert BulkParametersOfUnequalLength();\\n        }\\n\\n        bool currentVal;\\n        for (uint256 i; i < collections.length; ) {\\n            currentVal =\\n                _emotesUsedByEmoter[msg.sender][collections[i]][tokenIds[i]][\\n                    emojis[i]\\n                ] ==\\n                1;\\n            if (currentVal != states[i]) {\\n                if (states[i]) {\\n                    _emotesPerToken[collections[i]][tokenIds[i]][\\n                        emojis[i]\\n                    ] += 1;\\n                } else {\\n                    _emotesPerToken[collections[i]][tokenIds[i]][\\n                        emojis[i]\\n                    ] -= 1;\\n                }\\n                _emotesUsedByEmoter[msg.sender][collections[i]][tokenIds[i]][\\n                    emojis[i]\\n                ] = states[i] ? 1 : 0;\\n                emit Emoted(\\n                    msg.sender,\\n                    collections[i],\\n                    tokenIds[i],\\n                    emojis[i],\\n                    states[i]\\n                );\\n            }\\n            unchecked {\\n                ++i;\\n            }\\n        }\\n    }\\n\\n    function prepareMessageToPresignEmote(\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji,\\n        bool state,\\n        uint256 deadline\\n    ) public view returns (bytes32) {\\n        return\\n            keccak256(\\n                abi.encode(\\n                    DOMAIN_SEPARATOR,\\n                    collection,\\n                    tokenId,\\n                    emoji,\\n                    state,\\n                    deadline\\n                )\\n            );\\n    }\\n\\n    function bulkPrepareMessagesToPresignEmote(\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis,\\n        bool[] memory states,\\n        uint256[] memory deadlines\\n    ) public view returns (bytes32[] memory) {\\n        if (\\n            collections.length != tokenIds.length ||\\n            collections.length != emojis.length ||\\n            collections.length != states.length ||\\n            collections.length != deadlines.length\\n        ) {\\n            revert BulkParametersOfUnequalLength();\\n        }\\n\\n        bytes32[] memory messages = new bytes32[](collections.length);\\n        for (uint256 i; i < collections.length; ) {\\n            messages[i] = keccak256(\\n                abi.encode(\\n                    DOMAIN_SEPARATOR,\\n                    collections[i],\\n                    tokenIds[i],\\n                    emojis[i],\\n                    states[i],\\n                    deadlines[i]\\n                )\\n            );\\n            unchecked {\\n                ++i;\\n            }\\n        }\\n\\n        return messages;\\n    }\\n\\n    function presignedEmote(\\n        address emoter,\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji,\\n        bool state,\\n        uint256 deadline,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) public {\\n        if (block.timestamp > deadline) {\\n            revert ExpiredPresignedEmote();\\n        }\\n        bytes32 digest = keccak256(\\n            abi.encodePacked(\\n                \\\"\\\\x19Ethereum Signed Message:\\\\n32\\\",\\n                keccak256(\\n                    abi.encode(\\n                        DOMAIN_SEPARATOR,\\n                        collection,\\n                        tokenId,\\n                        emoji,\\n                        state,\\n                        deadline\\n                    )\\n                )\\n            )\\n        );\\n        address signer = ecrecover(digest, v, r, s);\\n        if (signer != emoter) {\\n            revert InvalidSignature();\\n        }\\n\\n        bool currentVal = _emotesUsedByEmoter[signer][collection][tokenId][\\n            emoji\\n        ] == 1;\\n        if (currentVal != state) {\\n            if (state) {\\n                _emotesPerToken[collection][tokenId][emoji] += 1;\\n            } else {\\n                _emotesPerToken[collection][tokenId][emoji] -= 1;\\n            }\\n            _emotesUsedByEmoter[signer][collection][tokenId][emoji] = state\\n                ? 1\\n                : 0;\\n            emit Emoted(signer, collection, tokenId, emoji, state);\\n        }\\n    }\\n\\n    function bulkPresignedEmote(\\n        address[] memory emoters,\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis,\\n        bool[] memory states,\\n        uint256[] memory deadlines,\\n        uint8[] memory v,\\n        bytes32[] memory r,\\n        bytes32[] memory s\\n    ) public {\\n        if (\\n            emoters.length != collections.length ||\\n            emoters.length != tokenIds.length ||\\n            emoters.length != emojis.length ||\\n            emoters.length != states.length ||\\n            emoters.length != deadlines.length ||\\n            emoters.length != v.length ||\\n            emoters.length != r.length ||\\n            emoters.length != s.length\\n        ) {\\n            revert BulkParametersOfUnequalLength();\\n        }\\n\\n        bytes32 digest;\\n        address signer;\\n        bool currentVal;\\n        for (uint256 i; i < collections.length; ) {\\n            if (block.timestamp > deadlines[i]) {\\n                revert ExpiredPresignedEmote();\\n            }\\n            digest = keccak256(\\n                abi.encodePacked(\\n                    \\\"\\\\x19Ethereum Signed Message:\\\\n32\\\",\\n                    keccak256(\\n                        abi.encode(\\n                            DOMAIN_SEPARATOR,\\n                            collections[i],\\n                            tokenIds[i],\\n                            emojis[i],\\n                            states[i],\\n                            deadlines[i]\\n                        )\\n                    )\\n                )\\n            );\\n            signer = ecrecover(digest, v[i], r[i], s[i]);\\n            if (signer != emoters[i]) {\\n                revert InvalidSignature();\\n            }\\n\\n            currentVal =\\n                _emotesUsedByEmoter[signer][collections[i]][tokenIds[i]][\\n                    emojis[i]\\n                ] ==\\n                1;\\n            if (currentVal != states[i]) {\\n                if (states[i]) {\\n                    _emotesPerToken[collections[i]][tokenIds[i]][\\n                        emojis[i]\\n                    ] += 1;\\n                } else {\\n                    _emotesPerToken[collections[i]][tokenIds[i]][\\n                        emojis[i]\\n                    ] -= 1;\\n                }\\n                _emotesUsedByEmoter[signer][collections[i]][tokenIds[i]][\\n                    emojis[i]\\n                ] = states[i] ? 1 : 0;\\n                emit Emoted(\\n                    signer,\\n                    collections[i],\\n                    tokenIds[i],\\n                    emojis[i],\\n                    states[i]\\n                );\\n            }\\n            unchecked {\\n                ++i;\\n            }\\n        }\\n    }\\n\\n    function supportsInterface(\\n        bytes4 interfaceId\\n    ) public view virtual returns (bool) {\\n        return\\n            interfaceId == type(IERC7409).interfaceId ||\\n            interfaceId == type(IERC165).interfaceId;\\n    }\\n}\",\"keccak256\":\"0x1faedc1242a961b22b215d758e0e2c1d3bcf3f3f95654d789a20e2394c9c9733\",\"license\":\"CC0-1.0\"},\"contracts/IERC7409.sol\":{\"content\":\"// SPDX-License-Identifier: CC0-1.0\\n\\npragma solidity ^0.8.16;\\n\\ninterface IERC7409 {\\n    event Emoted(\\n        address indexed emoter,\\n        address indexed collection,\\n        uint256 indexed tokenId,\\n        string emoji,\\n        bool on\\n    );\\n\\n    function emoteCountOf(\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji\\n    ) external view returns (uint256);\\n\\n    function bulkEmoteCountOf(\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis\\n    ) external view returns (uint256[] memory);\\n\\n    function hasEmoterUsedEmote(\\n        address emoter,\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji\\n    ) external view returns (bool);\\n\\n    function haveEmotersUsedEmotes(\\n        address[] memory emoters,\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis\\n    ) external view returns (bool[] memory);\\n\\n    function prepareMessageToPresignEmote(\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji,\\n        bool state,\\n        uint256 deadline\\n    ) external view returns (bytes32);\\n    \\n    function bulkPrepareMessagesToPresignEmote(\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis,\\n        bool[] memory states,\\n        uint256[] memory deadlines\\n    ) external view returns (bytes32[] memory);\\n\\n    function emote(\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji,\\n        bool state\\n    ) external;\\n\\n    function bulkEmote(\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis,\\n        bool[] memory states\\n    ) external;\\n\\n    function presignedEmote(\\n        address emoter,\\n        address collection,\\n        uint256 tokenId,\\n        string memory emoji,\\n        bool state,\\n        uint256 deadline,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) external;\\n\\n    function bulkPresignedEmote(\\n        address[] memory emoters,\\n        address[] memory collections,\\n        uint256[] memory tokenIds,\\n        string[] memory emojis,\\n        bool[] memory states,\\n        uint256[] memory deadlines,\\n        uint8[] memory v,\\n        bytes32[] memory r,\\n        bytes32[] memory s\\n    ) external;\\n}\",\"keccak256\":\"0x3881bd9d36469c6528811c4b283167f471d73a2457dc1ab9035752477e96245d\",\"license\":\"CC0-1.0\"}},\"version\":1}",
+  "bytecode": "0x608060c08181526034610140527f4552432d373430393a205075626c6963204e6f6e2d46756e6769626c6520546f610160527f6b656e20456d6f7465205265706f7369746f72790000000000000000000000006101805260e0805260016101a052603160f81b6101c05246610100523061012090815260a08190526101e06040529020905234801561009057600080fd5b506080516123b76100c8600039600081816101060152818161024b015281816106e201528181610d4901526112b801526123b76000f3fe608060405234801561001057600080fd5b50600436106100d45760003560e01c8063a802a32d11610081578063d600afe61161005b578063d600afe6146101d7578063d892eb9c146101ea578063f1bf462c146101fd57600080fd5b8063a802a32d14610191578063b6b6129f146101a4578063cb55d7b1146101b757600080fd5b806349471116116100b257806349471116146101495780634e40a74d1461015c578063760cc0881461017c57600080fd5b806301ffc9a7146100d95780633644e5151461010157806340f4352d14610136575b600080fd5b6100ec6100e736600461185a565b610210565b60405190151581526020015b60405180910390f35b6101287f000000000000000000000000000000000000000000000000000000000000000081565b6040519081526020016100f8565b61012861014436600461196e565b610247565b6100ec6101573660046119de565b6102a5565b61016f61016a366004611bac565b6102fe565b6040516100f89190611c34565b61018f61018a366004611c78565b610451565b005b61018f61019f366004611db5565b610617565b61018f6101b2366004611f1a565b610d24565b6101ca6101c5366004611fc1565b611071565b6040516100f89190612062565b61016f6101e536600461209c565b611215565b61018f6101f836600461216e565b6113b4565b61012861020b36600461220f565b611811565b60006001600160e01b03198216631b3327ab60e01b148061024157506001600160e01b031982166301ffc9a760e01b145b92915050565b60007f00000000000000000000000000000000000000000000000000000000000000008686868686604051602001610284969594939291906122ac565b60405160208183030381529060405280519060200120905095945050505050565b6001600160a01b038085166000908152602081815260408083209387168352928152828220858352905281812091519091906102e29084906122ef565b9081526020016040518091039020546001149050949350505050565b60608251845114158061031357508151845114155b156103315760405163395c70bb60e11b815260040160405180910390fd5b6000845167ffffffffffffffff81111561034d5761034d6118a7565b604051908082528060200260200182016040528015610376578160200160208202803683370190505b50905060005b8551811015610448576001600087838151811061039b5761039b61230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008683815181106103d7576103d761230b565b602002602001015181526020019081526020016000208482815181106103ff576103ff61230b565b602002602001015160405161041491906122ef565b9081526020016040518091039020548282815181106104355761043561230b565b602090810291909101015260010161037c565b50949350505050565b336000908152602081815260408083206001600160a01b0388168452825280832086845290915280822090516104889085906122ef565b9081526040519081900360200190205460011490508115158114610610578115610509576001600160a01b03851660009081526001602081815260408084208885529091529182902091519091906104e19086906122ef565b908152602001604051809103902060008282546104fe9190612337565b909155506105619050565b6001600160a01b038516600090815260016020818152604080842088855290915291829020915190919061053e9086906122ef565b9081526020016040518091039020600082825461055b919061234a565b90915550505b8161056d576000610570565b60015b336000908152602081815260408083206001600160a01b038a168452825280832088845290915290819020905160ff92909216916105af9086906122ef565b90815260200160405180910390208190555083856001600160a01b0316336001600160a01b03167fc2b82fdaed025f01d8e5b2b33a92ae334e5aea9c6f7c9b09a0b51a21540efdb5868660405161060792919061235d565b60405180910390a45b5050505050565b8751895114158061062a57508651895114155b8061063757508551895114155b8061064457508451895114155b8061065157508351895114155b8061065e57508251895114155b8061066b57508151895114155b8061067857508051895114155b156106965760405163395c70bb60e11b815260040160405180910390fd5b6000806000805b8b51811015610d15578781815181106106b8576106b861230b565b60200260200101514211156106e0576040516368c38c9160e01b815260040160405180910390fd5b7f00000000000000000000000000000000000000000000000000000000000000008c82815181106107135761071361230b565b60200260200101518c838151811061072d5761072d61230b565b60200260200101518c84815181106107475761074761230b565b60200260200101518c85815181106107615761076161230b565b60200260200101518c868151811061077b5761077b61230b565b6020026020010151604051602001610798969594939291906122ac565b60408051601f198184030181529082905280516020918201207f19457468657265756d205369676e6564204d6573736167653a0a33320000000091830191909152603c820152605c0160405160208183030381529060405280519060200120935060018488838151811061080e5761080e61230b565b60200260200101518884815181106108285761082861230b565b60200260200101518885815181106108425761084261230b565b602002602001015160405160008152602001604052604051610880949392919093845260ff9290921660208401526040830152606082015260800190565b6020604051602081039080840390855afa1580156108a2573d6000803e3d6000fd5b5050506020604051035192508c81815181106108c0576108c061230b565b60200260200101516001600160a01b0316836001600160a01b0316146108f957604051638baa579f60e01b815260040160405180910390fd5b600080846001600160a01b03166001600160a01b0316815260200190815260200160002060008d83815181106109315761093161230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008c838151811061096d5761096d61230b565b602002602001015181526020019081526020016000208a82815181106109955761099561230b565b60200260200101516040516109aa91906122ef565b90815260200160405180910390205460011491508881815181106109d0576109d061230b565b6020026020010151151582151514610d0d578881815181106109f4576109f461230b565b602002602001015115610ab95760018060008e8481518110610a1857610a1861230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008d8481518110610a5457610a5461230b565b602002602001015181526020019081526020016000208b8381518110610a7c57610a7c61230b565b6020026020010151604051610a9191906122ef565b90815260200160405180910390206000828254610aae9190612337565b90915550610b6c9050565b60018060008e8481518110610ad057610ad061230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008d8481518110610b0c57610b0c61230b565b602002602001015181526020019081526020016000208b8381518110610b3457610b3461230b565b6020026020010151604051610b4991906122ef565b90815260200160405180910390206000828254610b66919061234a565b90915550505b888181518110610b7e57610b7e61230b565b6020026020010151610b91576000610b94565b60015b60ff16600080856001600160a01b03166001600160a01b0316815260200190815260200160002060008e8481518110610bcf57610bcf61230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008d8481518110610c0b57610c0b61230b565b602002602001015181526020019081526020016000208b8381518110610c3357610c3361230b565b6020026020010151604051610c4891906122ef565b9081526020016040518091039020819055508a8181518110610c6c57610c6c61230b565b60200260200101518c8281518110610c8657610c8661230b565b60200260200101516001600160a01b0316846001600160a01b03167fc2b82fdaed025f01d8e5b2b33a92ae334e5aea9c6f7c9b09a0b51a21540efdb58d8581518110610cd457610cd461230b565b60200260200101518d8681518110610cee57610cee61230b565b6020026020010151604051610d0492919061235d565b60405180910390a45b60010161069d565b50505050505050505050505050565b83421115610d45576040516368c38c9160e01b815260040160405180910390fd5b60007f00000000000000000000000000000000000000000000000000000000000000008989898989604051602001610d82969594939291906122ac565b60408051601f198184030181529082905280516020918201207f19457468657265756d205369676e6564204d6573736167653a0a33320000000091830191909152603c820152605c0160408051601f198184030181528282528051602091820120600080855291840180845281905260ff88169284019290925260608301869052608083018590529092509060019060a0016020604051602081039080840390855afa158015610e36573d6000803e3d6000fd5b5050506020604051035190508a6001600160a01b0316816001600160a01b031614610e7457604051638baa579f60e01b815260040160405180910390fd5b6001600160a01b03808216600090815260208181526040808320938e1683529281528282208c835290528181209151909190610eb1908b906122ef565b9081526040519081900360200190205460011490508715158114611063578715610f32576001600160a01b038b1660009081526001602081815260408084208e8552909152918290209151909190610f0a908c906122ef565b90815260200160405180910390206000828254610f279190612337565b90915550610f8a9050565b6001600160a01b038b1660009081526001602081815260408084208e8552909152918290209151909190610f67908c906122ef565b90815260200160405180910390206000828254610f84919061234a565b90915550505b87610f96576000610f99565b60015b60ff16600080846001600160a01b03166001600160a01b0316815260200190815260200160002060008d6001600160a01b03166001600160a01b0316815260200190815260200160002060008c81526020019081526020016000208a60405161100291906122ef565b908152602001604051809103902081905550898b6001600160a01b0316836001600160a01b03167fc2b82fdaed025f01d8e5b2b33a92ae334e5aea9c6f7c9b09a0b51a21540efdb58c8c60405161105a92919061235d565b60405180910390a45b505050505050505050505050565b60608351855114158061108657508251855114155b8061109357508151855114155b156110b15760405163395c70bb60e11b815260040160405180910390fd5b6000845167ffffffffffffffff8111156110cd576110cd6118a7565b6040519080825280602002602001820160405280156110f6578160200160208202803683370190505b50905060005b855181101561120b5760008088838151811061111a5761111a61230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008783815181106111565761115661230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008683815181106111925761119261230b565b602002602001015181526020019081526020016000208482815181106111ba576111ba61230b565b60200260200101516040516111cf91906122ef565b9081526020016040518091039020546001148282815181106111f3576111f361230b565b911515602092830291909101909101526001016110fc565b5095945050505050565b60608451865114158061122a57508351865114155b8061123757508251865114155b8061124457508151865114155b156112625760405163395c70bb60e11b815260040160405180910390fd5b6000865167ffffffffffffffff81111561127e5761127e6118a7565b6040519080825280602002602001820160405280156112a7578160200160208202803683370190505b50905060005b87518110156113a9577f00000000000000000000000000000000000000000000000000000000000000008882815181106112e9576112e961230b565b60200260200101518883815181106113035761130361230b565b602002602001015188848151811061131d5761131d61230b565b60200260200101518885815181106113375761133761230b565b60200260200101518886815181106113515761135161230b565b602002602001015160405160200161136e969594939291906122ac565b604051602081830303815290604052805190602001208282815181106113965761139661230b565b60209081029190910101526001016112ad565b509695505050505050565b825184511415806113c757508151845114155b806113d457508051845114155b156113f25760405163395c70bb60e11b815260040160405180910390fd5b6000805b85518110156118095733600090815260208190526040812087519091908890849081106114255761142561230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008683815181106114615761146161230b565b602002602001015181526020019081526020016000208482815181106114895761148961230b565b602002602001015160405161149e91906122ef565b90815260200160405180910390205460011491508281815181106114c4576114c461230b565b6020026020010151151582151514611801578281815181106114e8576114e861230b565b6020026020010151156115ad57600180600088848151811061150c5761150c61230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008784815181106115485761154861230b565b602002602001015181526020019081526020016000208583815181106115705761157061230b565b602002602001015160405161158591906122ef565b908152602001604051809103902060008282546115a29190612337565b909155506116609050565b60018060008884815181106115c4576115c461230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008784815181106116005761160061230b565b602002602001015181526020019081526020016000208583815181106116285761162861230b565b602002602001015160405161163d91906122ef565b9081526020016040518091039020600082825461165a919061234a565b90915550505b8281815181106116725761167261230b565b6020026020010151611685576000611688565b60015b60ff16600080336001600160a01b03166001600160a01b0316815260200190815260200160002060008884815181106116c3576116c361230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008784815181106116ff576116ff61230b565b602002602001015181526020019081526020016000208583815181106117275761172761230b565b602002602001015160405161173c91906122ef565b9081526020016040518091039020819055508481815181106117605761176061230b565b602002602001015186828151811061177a5761177a61230b565b60200260200101516001600160a01b0316336001600160a01b03167fc2b82fdaed025f01d8e5b2b33a92ae334e5aea9c6f7c9b09a0b51a21540efdb58785815181106117c8576117c861230b565b60200260200101518786815181106117e2576117e261230b565b60200260200101516040516117f892919061235d565b60405180910390a45b6001016113f6565b505050505050565b6001600160a01b038316600090815260016020908152604080832085845290915280822090516118429084906122ef565b90815260200160405180910390205490509392505050565b60006020828403121561186c57600080fd5b81356001600160e01b03198116811461188457600080fd5b9392505050565b80356001600160a01b03811681146118a257600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff811182821017156118e6576118e66118a7565b604052919050565b600082601f8301126118ff57600080fd5b813567ffffffffffffffff811115611919576119196118a7565b61192c601f8201601f19166020016118bd565b81815284602083860101111561194157600080fd5b816020850160208301376000918101602001919091529392505050565b803580151581146118a257600080fd5b600080600080600060a0868803121561198657600080fd5b61198f8661188b565b945060208601359350604086013567ffffffffffffffff8111156119b257600080fd5b6119be888289016118ee565b9350506119cd6060870161195e565b949793965091946080013592915050565b600080600080608085870312156119f457600080fd5b6119fd8561188b565b9350611a0b6020860161188b565b925060408501359150606085013567ffffffffffffffff811115611a2e57600080fd5b611a3a878288016118ee565b91505092959194509250565b600067ffffffffffffffff821115611a6057611a606118a7565b5060051b60200190565b600082601f830112611a7b57600080fd5b81356020611a90611a8b83611a46565b6118bd565b82815260059290921b84018101918181019086841115611aaf57600080fd5b8286015b848110156113a957611ac48161188b565b8352918301918301611ab3565b600082601f830112611ae257600080fd5b81356020611af2611a8b83611a46565b82815260059290921b84018101918181019086841115611b1157600080fd5b8286015b848110156113a95780358352918301918301611b15565b600082601f830112611b3d57600080fd5b81356020611b4d611a8b83611a46565b82815260059290921b84018101918181019086841115611b6c57600080fd5b8286015b848110156113a957803567ffffffffffffffff811115611b905760008081fd5b611b9e8986838b01016118ee565b845250918301918301611b70565b600080600060608486031215611bc157600080fd5b833567ffffffffffffffff80821115611bd957600080fd5b611be587838801611a6a565b94506020860135915080821115611bfb57600080fd5b611c0787838801611ad1565b93506040860135915080821115611c1d57600080fd5b50611c2a86828701611b2c565b9150509250925092565b6020808252825182820181905260009190848201906040850190845b81811015611c6c57835183529284019291840191600101611c50565b50909695505050505050565b60008060008060808587031215611c8e57600080fd5b611c978561188b565b935060208501359250604085013567ffffffffffffffff811115611cba57600080fd5b611cc6878288016118ee565b925050611cd56060860161195e565b905092959194509250565b600082601f830112611cf157600080fd5b81356020611d01611a8b83611a46565b82815260059290921b84018101918181019086841115611d2057600080fd5b8286015b848110156113a957611d358161195e565b8352918301918301611d24565b803560ff811681146118a257600080fd5b600082601f830112611d6457600080fd5b81356020611d74611a8b83611a46565b82815260059290921b84018101918181019086841115611d9357600080fd5b8286015b848110156113a957611da881611d42565b8352918301918301611d97565b60008060008060008060008060006101208a8c031215611dd457600080fd5b893567ffffffffffffffff80821115611dec57600080fd5b611df88d838e01611a6a565b9a5060208c0135915080821115611e0e57600080fd5b611e1a8d838e01611a6a565b995060408c0135915080821115611e3057600080fd5b611e3c8d838e01611ad1565b985060608c0135915080821115611e5257600080fd5b611e5e8d838e01611b2c565b975060808c0135915080821115611e7457600080fd5b611e808d838e01611ce0565b965060a08c0135915080821115611e9657600080fd5b611ea28d838e01611ad1565b955060c08c0135915080821115611eb857600080fd5b611ec48d838e01611d53565b945060e08c0135915080821115611eda57600080fd5b611ee68d838e01611ad1565b93506101008c0135915080821115611efd57600080fd5b50611f0a8c828d01611ad1565b9150509295985092959850929598565b60008060008060008060008060006101208a8c031215611f3957600080fd5b611f428a61188b565b9850611f5060208b0161188b565b975060408a0135965060608a013567ffffffffffffffff811115611f7357600080fd5b611f7f8c828d016118ee565b965050611f8e60808b0161195e565b945060a08a01359350611fa360c08b01611d42565b925060e08a013591506101008a013590509295985092959850929598565b60008060008060808587031215611fd757600080fd5b843567ffffffffffffffff80821115611fef57600080fd5b611ffb88838901611a6a565b9550602087013591508082111561201157600080fd5b61201d88838901611a6a565b9450604087013591508082111561203357600080fd5b61203f88838901611ad1565b9350606087013591508082111561205557600080fd5b50611a3a87828801611b2c565b6020808252825182820181905260009190848201906040850190845b81811015611c6c57835115158352928401929184019160010161207e565b600080600080600060a086880312156120b457600080fd5b853567ffffffffffffffff808211156120cc57600080fd5b6120d889838a01611a6a565b965060208801359150808211156120ee57600080fd5b6120fa89838a01611ad1565b9550604088013591508082111561211057600080fd5b61211c89838a01611b2c565b9450606088013591508082111561213257600080fd5b61213e89838a01611ce0565b9350608088013591508082111561215457600080fd5b5061216188828901611ad1565b9150509295509295909350565b6000806000806080858703121561218457600080fd5b843567ffffffffffffffff8082111561219c57600080fd5b6121a888838901611a6a565b955060208701359150808211156121be57600080fd5b6121ca88838901611ad1565b945060408701359150808211156121e057600080fd5b6121ec88838901611b2c565b9350606087013591508082111561220257600080fd5b50611a3a87828801611ce0565b60008060006060848603121561222457600080fd5b61222d8461188b565b925060208401359150604084013567ffffffffffffffff81111561225057600080fd5b611c2a868287016118ee565b60005b8381101561227757818101518382015260200161225f565b50506000910152565b6000815180845261229881602086016020860161225c565b601f01601f19169290920160200192915050565b8681526001600160a01b038616602082015284604082015260c0606082015260006122da60c0830186612280565b93151560808301525060a00152949350505050565b6000825161230181846020870161225c565b9190910192915050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b8082018082111561024157610241612321565b8181038181111561024157610241612321565b6040815260006123706040830185612280565b90508215156020830152939250505056fea2646970667358221220770192224010452e0292737840ada6f2d90c73919a94c8b1cf29208938a0caad64736f6c63430008150033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100d45760003560e01c8063a802a32d11610081578063d600afe61161005b578063d600afe6146101d7578063d892eb9c146101ea578063f1bf462c146101fd57600080fd5b8063a802a32d14610191578063b6b6129f146101a4578063cb55d7b1146101b757600080fd5b806349471116116100b257806349471116146101495780634e40a74d1461015c578063760cc0881461017c57600080fd5b806301ffc9a7146100d95780633644e5151461010157806340f4352d14610136575b600080fd5b6100ec6100e736600461185a565b610210565b60405190151581526020015b60405180910390f35b6101287f000000000000000000000000000000000000000000000000000000000000000081565b6040519081526020016100f8565b61012861014436600461196e565b610247565b6100ec6101573660046119de565b6102a5565b61016f61016a366004611bac565b6102fe565b6040516100f89190611c34565b61018f61018a366004611c78565b610451565b005b61018f61019f366004611db5565b610617565b61018f6101b2366004611f1a565b610d24565b6101ca6101c5366004611fc1565b611071565b6040516100f89190612062565b61016f6101e536600461209c565b611215565b61018f6101f836600461216e565b6113b4565b61012861020b36600461220f565b611811565b60006001600160e01b03198216631b3327ab60e01b148061024157506001600160e01b031982166301ffc9a760e01b145b92915050565b60007f00000000000000000000000000000000000000000000000000000000000000008686868686604051602001610284969594939291906122ac565b60405160208183030381529060405280519060200120905095945050505050565b6001600160a01b038085166000908152602081815260408083209387168352928152828220858352905281812091519091906102e29084906122ef565b9081526020016040518091039020546001149050949350505050565b60608251845114158061031357508151845114155b156103315760405163395c70bb60e11b815260040160405180910390fd5b6000845167ffffffffffffffff81111561034d5761034d6118a7565b604051908082528060200260200182016040528015610376578160200160208202803683370190505b50905060005b8551811015610448576001600087838151811061039b5761039b61230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008683815181106103d7576103d761230b565b602002602001015181526020019081526020016000208482815181106103ff576103ff61230b565b602002602001015160405161041491906122ef565b9081526020016040518091039020548282815181106104355761043561230b565b602090810291909101015260010161037c565b50949350505050565b336000908152602081815260408083206001600160a01b0388168452825280832086845290915280822090516104889085906122ef565b9081526040519081900360200190205460011490508115158114610610578115610509576001600160a01b03851660009081526001602081815260408084208885529091529182902091519091906104e19086906122ef565b908152602001604051809103902060008282546104fe9190612337565b909155506105619050565b6001600160a01b038516600090815260016020818152604080842088855290915291829020915190919061053e9086906122ef565b9081526020016040518091039020600082825461055b919061234a565b90915550505b8161056d576000610570565b60015b336000908152602081815260408083206001600160a01b038a168452825280832088845290915290819020905160ff92909216916105af9086906122ef565b90815260200160405180910390208190555083856001600160a01b0316336001600160a01b03167fc2b82fdaed025f01d8e5b2b33a92ae334e5aea9c6f7c9b09a0b51a21540efdb5868660405161060792919061235d565b60405180910390a45b5050505050565b8751895114158061062a57508651895114155b8061063757508551895114155b8061064457508451895114155b8061065157508351895114155b8061065e57508251895114155b8061066b57508151895114155b8061067857508051895114155b156106965760405163395c70bb60e11b815260040160405180910390fd5b6000806000805b8b51811015610d15578781815181106106b8576106b861230b565b60200260200101514211156106e0576040516368c38c9160e01b815260040160405180910390fd5b7f00000000000000000000000000000000000000000000000000000000000000008c82815181106107135761071361230b565b60200260200101518c838151811061072d5761072d61230b565b60200260200101518c84815181106107475761074761230b565b60200260200101518c85815181106107615761076161230b565b60200260200101518c868151811061077b5761077b61230b565b6020026020010151604051602001610798969594939291906122ac565b60408051601f198184030181529082905280516020918201207f19457468657265756d205369676e6564204d6573736167653a0a33320000000091830191909152603c820152605c0160405160208183030381529060405280519060200120935060018488838151811061080e5761080e61230b565b60200260200101518884815181106108285761082861230b565b60200260200101518885815181106108425761084261230b565b602002602001015160405160008152602001604052604051610880949392919093845260ff9290921660208401526040830152606082015260800190565b6020604051602081039080840390855afa1580156108a2573d6000803e3d6000fd5b5050506020604051035192508c81815181106108c0576108c061230b565b60200260200101516001600160a01b0316836001600160a01b0316146108f957604051638baa579f60e01b815260040160405180910390fd5b600080846001600160a01b03166001600160a01b0316815260200190815260200160002060008d83815181106109315761093161230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008c838151811061096d5761096d61230b565b602002602001015181526020019081526020016000208a82815181106109955761099561230b565b60200260200101516040516109aa91906122ef565b90815260200160405180910390205460011491508881815181106109d0576109d061230b565b6020026020010151151582151514610d0d578881815181106109f4576109f461230b565b602002602001015115610ab95760018060008e8481518110610a1857610a1861230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008d8481518110610a5457610a5461230b565b602002602001015181526020019081526020016000208b8381518110610a7c57610a7c61230b565b6020026020010151604051610a9191906122ef565b90815260200160405180910390206000828254610aae9190612337565b90915550610b6c9050565b60018060008e8481518110610ad057610ad061230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008d8481518110610b0c57610b0c61230b565b602002602001015181526020019081526020016000208b8381518110610b3457610b3461230b565b6020026020010151604051610b4991906122ef565b90815260200160405180910390206000828254610b66919061234a565b90915550505b888181518110610b7e57610b7e61230b565b6020026020010151610b91576000610b94565b60015b60ff16600080856001600160a01b03166001600160a01b0316815260200190815260200160002060008e8481518110610bcf57610bcf61230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008d8481518110610c0b57610c0b61230b565b602002602001015181526020019081526020016000208b8381518110610c3357610c3361230b565b6020026020010151604051610c4891906122ef565b9081526020016040518091039020819055508a8181518110610c6c57610c6c61230b565b60200260200101518c8281518110610c8657610c8661230b565b60200260200101516001600160a01b0316846001600160a01b03167fc2b82fdaed025f01d8e5b2b33a92ae334e5aea9c6f7c9b09a0b51a21540efdb58d8581518110610cd457610cd461230b565b60200260200101518d8681518110610cee57610cee61230b565b6020026020010151604051610d0492919061235d565b60405180910390a45b60010161069d565b50505050505050505050505050565b83421115610d45576040516368c38c9160e01b815260040160405180910390fd5b60007f00000000000000000000000000000000000000000000000000000000000000008989898989604051602001610d82969594939291906122ac565b60408051601f198184030181529082905280516020918201207f19457468657265756d205369676e6564204d6573736167653a0a33320000000091830191909152603c820152605c0160408051601f198184030181528282528051602091820120600080855291840180845281905260ff88169284019290925260608301869052608083018590529092509060019060a0016020604051602081039080840390855afa158015610e36573d6000803e3d6000fd5b5050506020604051035190508a6001600160a01b0316816001600160a01b031614610e7457604051638baa579f60e01b815260040160405180910390fd5b6001600160a01b03808216600090815260208181526040808320938e1683529281528282208c835290528181209151909190610eb1908b906122ef565b9081526040519081900360200190205460011490508715158114611063578715610f32576001600160a01b038b1660009081526001602081815260408084208e8552909152918290209151909190610f0a908c906122ef565b90815260200160405180910390206000828254610f279190612337565b90915550610f8a9050565b6001600160a01b038b1660009081526001602081815260408084208e8552909152918290209151909190610f67908c906122ef565b90815260200160405180910390206000828254610f84919061234a565b90915550505b87610f96576000610f99565b60015b60ff16600080846001600160a01b03166001600160a01b0316815260200190815260200160002060008d6001600160a01b03166001600160a01b0316815260200190815260200160002060008c81526020019081526020016000208a60405161100291906122ef565b908152602001604051809103902081905550898b6001600160a01b0316836001600160a01b03167fc2b82fdaed025f01d8e5b2b33a92ae334e5aea9c6f7c9b09a0b51a21540efdb58c8c60405161105a92919061235d565b60405180910390a45b505050505050505050505050565b60608351855114158061108657508251855114155b8061109357508151855114155b156110b15760405163395c70bb60e11b815260040160405180910390fd5b6000845167ffffffffffffffff8111156110cd576110cd6118a7565b6040519080825280602002602001820160405280156110f6578160200160208202803683370190505b50905060005b855181101561120b5760008088838151811061111a5761111a61230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008783815181106111565761115661230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008683815181106111925761119261230b565b602002602001015181526020019081526020016000208482815181106111ba576111ba61230b565b60200260200101516040516111cf91906122ef565b9081526020016040518091039020546001148282815181106111f3576111f361230b565b911515602092830291909101909101526001016110fc565b5095945050505050565b60608451865114158061122a57508351865114155b8061123757508251865114155b8061124457508151865114155b156112625760405163395c70bb60e11b815260040160405180910390fd5b6000865167ffffffffffffffff81111561127e5761127e6118a7565b6040519080825280602002602001820160405280156112a7578160200160208202803683370190505b50905060005b87518110156113a9577f00000000000000000000000000000000000000000000000000000000000000008882815181106112e9576112e961230b565b60200260200101518883815181106113035761130361230b565b602002602001015188848151811061131d5761131d61230b565b60200260200101518885815181106113375761133761230b565b60200260200101518886815181106113515761135161230b565b602002602001015160405160200161136e969594939291906122ac565b604051602081830303815290604052805190602001208282815181106113965761139661230b565b60209081029190910101526001016112ad565b509695505050505050565b825184511415806113c757508151845114155b806113d457508051845114155b156113f25760405163395c70bb60e11b815260040160405180910390fd5b6000805b85518110156118095733600090815260208190526040812087519091908890849081106114255761142561230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008683815181106114615761146161230b565b602002602001015181526020019081526020016000208482815181106114895761148961230b565b602002602001015160405161149e91906122ef565b90815260200160405180910390205460011491508281815181106114c4576114c461230b565b6020026020010151151582151514611801578281815181106114e8576114e861230b565b6020026020010151156115ad57600180600088848151811061150c5761150c61230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008784815181106115485761154861230b565b602002602001015181526020019081526020016000208583815181106115705761157061230b565b602002602001015160405161158591906122ef565b908152602001604051809103902060008282546115a29190612337565b909155506116609050565b60018060008884815181106115c4576115c461230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008784815181106116005761160061230b565b602002602001015181526020019081526020016000208583815181106116285761162861230b565b602002602001015160405161163d91906122ef565b9081526020016040518091039020600082825461165a919061234a565b90915550505b8281815181106116725761167261230b565b6020026020010151611685576000611688565b60015b60ff16600080336001600160a01b03166001600160a01b0316815260200190815260200160002060008884815181106116c3576116c361230b565b60200260200101516001600160a01b03166001600160a01b0316815260200190815260200160002060008784815181106116ff576116ff61230b565b602002602001015181526020019081526020016000208583815181106117275761172761230b565b602002602001015160405161173c91906122ef565b9081526020016040518091039020819055508481815181106117605761176061230b565b602002602001015186828151811061177a5761177a61230b565b60200260200101516001600160a01b0316336001600160a01b03167fc2b82fdaed025f01d8e5b2b33a92ae334e5aea9c6f7c9b09a0b51a21540efdb58785815181106117c8576117c861230b565b60200260200101518786815181106117e2576117e261230b565b60200260200101516040516117f892919061235d565b60405180910390a45b6001016113f6565b505050505050565b6001600160a01b038316600090815260016020908152604080832085845290915280822090516118429084906122ef565b90815260200160405180910390205490509392505050565b60006020828403121561186c57600080fd5b81356001600160e01b03198116811461188457600080fd5b9392505050565b80356001600160a01b03811681146118a257600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff811182821017156118e6576118e66118a7565b604052919050565b600082601f8301126118ff57600080fd5b813567ffffffffffffffff811115611919576119196118a7565b61192c601f8201601f19166020016118bd565b81815284602083860101111561194157600080fd5b816020850160208301376000918101602001919091529392505050565b803580151581146118a257600080fd5b600080600080600060a0868803121561198657600080fd5b61198f8661188b565b945060208601359350604086013567ffffffffffffffff8111156119b257600080fd5b6119be888289016118ee565b9350506119cd6060870161195e565b949793965091946080013592915050565b600080600080608085870312156119f457600080fd5b6119fd8561188b565b9350611a0b6020860161188b565b925060408501359150606085013567ffffffffffffffff811115611a2e57600080fd5b611a3a878288016118ee565b91505092959194509250565b600067ffffffffffffffff821115611a6057611a606118a7565b5060051b60200190565b600082601f830112611a7b57600080fd5b81356020611a90611a8b83611a46565b6118bd565b82815260059290921b84018101918181019086841115611aaf57600080fd5b8286015b848110156113a957611ac48161188b565b8352918301918301611ab3565b600082601f830112611ae257600080fd5b81356020611af2611a8b83611a46565b82815260059290921b84018101918181019086841115611b1157600080fd5b8286015b848110156113a95780358352918301918301611b15565b600082601f830112611b3d57600080fd5b81356020611b4d611a8b83611a46565b82815260059290921b84018101918181019086841115611b6c57600080fd5b8286015b848110156113a957803567ffffffffffffffff811115611b905760008081fd5b611b9e8986838b01016118ee565b845250918301918301611b70565b600080600060608486031215611bc157600080fd5b833567ffffffffffffffff80821115611bd957600080fd5b611be587838801611a6a565b94506020860135915080821115611bfb57600080fd5b611c0787838801611ad1565b93506040860135915080821115611c1d57600080fd5b50611c2a86828701611b2c565b9150509250925092565b6020808252825182820181905260009190848201906040850190845b81811015611c6c57835183529284019291840191600101611c50565b50909695505050505050565b60008060008060808587031215611c8e57600080fd5b611c978561188b565b935060208501359250604085013567ffffffffffffffff811115611cba57600080fd5b611cc6878288016118ee565b925050611cd56060860161195e565b905092959194509250565b600082601f830112611cf157600080fd5b81356020611d01611a8b83611a46565b82815260059290921b84018101918181019086841115611d2057600080fd5b8286015b848110156113a957611d358161195e565b8352918301918301611d24565b803560ff811681146118a257600080fd5b600082601f830112611d6457600080fd5b81356020611d74611a8b83611a46565b82815260059290921b84018101918181019086841115611d9357600080fd5b8286015b848110156113a957611da881611d42565b8352918301918301611d97565b60008060008060008060008060006101208a8c031215611dd457600080fd5b893567ffffffffffffffff80821115611dec57600080fd5b611df88d838e01611a6a565b9a5060208c0135915080821115611e0e57600080fd5b611e1a8d838e01611a6a565b995060408c0135915080821115611e3057600080fd5b611e3c8d838e01611ad1565b985060608c0135915080821115611e5257600080fd5b611e5e8d838e01611b2c565b975060808c0135915080821115611e7457600080fd5b611e808d838e01611ce0565b965060a08c0135915080821115611e9657600080fd5b611ea28d838e01611ad1565b955060c08c0135915080821115611eb857600080fd5b611ec48d838e01611d53565b945060e08c0135915080821115611eda57600080fd5b611ee68d838e01611ad1565b93506101008c0135915080821115611efd57600080fd5b50611f0a8c828d01611ad1565b9150509295985092959850929598565b60008060008060008060008060006101208a8c031215611f3957600080fd5b611f428a61188b565b9850611f5060208b0161188b565b975060408a0135965060608a013567ffffffffffffffff811115611f7357600080fd5b611f7f8c828d016118ee565b965050611f8e60808b0161195e565b945060a08a01359350611fa360c08b01611d42565b925060e08a013591506101008a013590509295985092959850929598565b60008060008060808587031215611fd757600080fd5b843567ffffffffffffffff80821115611fef57600080fd5b611ffb88838901611a6a565b9550602087013591508082111561201157600080fd5b61201d88838901611a6a565b9450604087013591508082111561203357600080fd5b61203f88838901611ad1565b9350606087013591508082111561205557600080fd5b50611a3a87828801611b2c565b6020808252825182820181905260009190848201906040850190845b81811015611c6c57835115158352928401929184019160010161207e565b600080600080600060a086880312156120b457600080fd5b853567ffffffffffffffff808211156120cc57600080fd5b6120d889838a01611a6a565b965060208801359150808211156120ee57600080fd5b6120fa89838a01611ad1565b9550604088013591508082111561211057600080fd5b61211c89838a01611b2c565b9450606088013591508082111561213257600080fd5b61213e89838a01611ce0565b9350608088013591508082111561215457600080fd5b5061216188828901611ad1565b9150509295509295909350565b6000806000806080858703121561218457600080fd5b843567ffffffffffffffff8082111561219c57600080fd5b6121a888838901611a6a565b955060208701359150808211156121be57600080fd5b6121ca88838901611ad1565b945060408701359150808211156121e057600080fd5b6121ec88838901611b2c565b9350606087013591508082111561220257600080fd5b50611a3a87828801611ce0565b60008060006060848603121561222457600080fd5b61222d8461188b565b925060208401359150604084013567ffffffffffffffff81111561225057600080fd5b611c2a868287016118ee565b60005b8381101561227757818101518382015260200161225f565b50506000910152565b6000815180845261229881602086016020860161225c565b601f01601f19169290920160200192915050565b8681526001600160a01b038616602082015284604082015260c0606082015260006122da60c0830186612280565b93151560808301525060a00152949350505050565b6000825161230181846020870161225c565b9190910192915050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b8082018082111561024157610241612321565b8181038181111561024157610241612321565b6040815260006123706040830185612280565b90508215156020830152939250505056fea2646970667358221220770192224010452e0292737840ada6f2d90c73919a94c8b1cf29208938a0caad64736f6c63430008150033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 3248,
+        "contract": "contracts/EmotableRepository.sol:EmoteRepository",
+        "label": "_emotesUsedByEmoter",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_string_memory_ptr,t_uint256))))"
+      },
+      {
+        "astId": 3256,
+        "contract": "contracts/EmotableRepository.sol:EmoteRepository",
+        "label": "_emotesPerToken",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_string_memory_ptr,t_uint256)))"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_string_memory_ptr,t_uint256))))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(address => mapping(uint256 => mapping(string => uint256))))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_string_memory_ptr,t_uint256)))"
+      },
+      "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_string_memory_ptr,t_uint256)))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(uint256 => mapping(string => uint256)))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_uint256,t_mapping(t_string_memory_ptr,t_uint256))"
+      },
+      "t_mapping(t_string_memory_ptr,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_string_memory_ptr",
+        "label": "mapping(string => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_uint256,t_mapping(t_string_memory_ptr,t_uint256))": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => mapping(string => uint256))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_string_memory_ptr,t_uint256)"
+      },
+      "t_string_memory_ptr": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "goerli": "npx hardhat run scripts/testdeploy.js --network goerli",
+    "mainnet": "npx hardhat run scripts/testdeploy.js --network mainnet",
+    "sepolia": "npx hardhat run scripts/testdeploy.js --network sepolia",
+    "BSCtestnet": "npx hardhat run scripts/testdeploy.js --network BSCtestnet",
+    "arbgoerli": "npx hardhat run scripts/testdeploy.js --network arbgoerli",
+    "mumbai": "npx hardhat run scripts/testdeploy.js --network mumbai",
+    "local": "npx hardhat run scripts/testdeploy.js --network localhost"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.4.1",
+    "chai": "^4.3.4",
+    "dotenv": "^15.0.0",
+    "ethers": "^6.9.0",
+    "fs-extra": "^10.1.0",
+    "hardhat-abi-exporter": "^2.4.1",
+    "hardhat-contract-sizer": "^2.6.1",
+    "hardhat-gas-reporter": "^1.0.9",
+    "mocha": "^9.2.2",
+    "web3modal": "^1.9.4",
+    "xmldom": "^0.6.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.4",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "hardhat": "^2.19.2",
+    "hardhat-deploy": "^0.11.44"
+  }
+}
